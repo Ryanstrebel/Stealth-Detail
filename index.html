@@ -3,254 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stealth Detail | $29/Mo Mobile Interior Resets in Lake City, FL</title>
+    <title>Stealth Mobile Detailing | Rapid Interior Resets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --bg-color: #0d0f12;
-            --card-bg: #16191e;
-            --accent-green: #00e676;
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --border-color: #262b33;
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                        url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 20px 15px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            padding: 30px 0 20px 0;
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(0, 230, 118, 0.1);
-            color: var(--accent-green);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            border: 1px solid rgba(0, 230, 118, 0.2);
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            line-height: 1.2;
-            margin-bottom: 12px;
-            font-weight: 800;
-        }
-
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 25px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .price-title {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .price-num {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--text-main);
-            margin: 10px 0;
-        }
-
-        .price-num span {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-
-        .features {
-            list-style: none;
-            margin: 20px 0;
-        }
-
-        .features li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .features li:last-child {
-            border-bottom: none;
-        }
-
-        .features li::before {
-            content: "✓";
-            color: var(--accent-green);
-            font-weight: bold;
-            margin-right: 12px;
-        }
-
-        .btn {
-            display: block;
-            width: 100%;
-            background: var(--accent-green);
-            color: #000;
-            text-align: center;
-            padding: 18px;
-            border-radius: 12px;
-            font-weight: 800;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: transform 0.1s ease;
-            box-shadow: 0 4px 15px rgba(0, 230, 118, 0.3);
-            margin-bottom: 12px;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-            box-shadow: none;
-        }
-
-        .notice-box {
-            background: rgba(255, 171, 0, 0.08);
-            border: 1px solid rgba(255, 171, 0, 0.25);
-            border-radius: 12px;
-            padding: 15px;
-            font-size: 0.85rem;
-            color: #ffca28;
-            margin-top: 15px;
-            line-height: 1.4;
-        }
-
-        .section-header {
-            font-size: 1.3rem;
-            margin: 30px 0 15px 0;
-            font-weight: 700;
-        }
-
-        .step-item {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .step-num {
-            background: var(--border-color);
-            color: var(--accent-green);
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        footer {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: 40px;
-            padding-bottom: 20px;
-        }
-
-        footer a {
-            color: var(--accent-green);
-            text-decoration: none;
+        .card-bg {
+            background: linear-gradient(rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.9));
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased">
 
-    <header>
-        <div class="badge">⚡ Lake City, FL • Mobile Interior Pass</div>
-        <h1>Never Drive a Dirty Car Interior Again.</h1>
-        <p class="subtitle">Quiet, 15-minute interior maintenance resets delivered to your home or office while you work or relax.</p>
+    <!-- Header / Nav -->
+    <header class="border-b border-slate-800 bg-slate-900/90 sticky top-0 z-50 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-wand-magic-sparkles text-cyan-400 text-2xl"></i>
+                <span class="text-xl font-bold tracking-wider text-white">STEALTH <span class="text-cyan-400">DETAIL</span></span>
+            </div>
+            <a href="tel:XXXXXXXXXX" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-4 py-2 rounded-lg text-sm transition">
+                <i class="fa-solid fa-comment-sms mr-1"></i> Text Us: (XXX) XXX-XXXX
+            </a>
+        </div>
     </header>
 
-    <div class="card">
-        <div class="price-title">Stealth Maintenance Pass</div>
-        <div class="price-num">$29 <span>/ month</span></div>
-        
-        <ul class="features">
-            <li><strong>2 Interior Resets</strong> per month (Every 2 weeks)</li>
-            <li>High-pressure compressed air purge & deep vacuum</li>
-            <li>Dash, center console & cup holder wipe down</li>
-            <li>Streak-free interior glass cleaning</li>
-            <li>Door jambs & rubber mat spray down</li>
-            <li>Zero drive time — done in your driveway/parking lot</li>
-        </ul>
-
-        <!-- LINK 1: Replace with your $29 Subscription Stripe Payment Link -->
-        <a href="INSERT_SUBSCRIPTION_STRIPE_LINK_HERE" class="btn">SUBSCRIBE NOW ($29/MO)</a>
-        
-        <!-- LINK 2: Optional One-Time Service Link -->
-        <a href="INSERT_ONETIME_STRIPE_LINK_HERE" class="btn btn-secondary">Book One-Time Reset ($49)</a>
-
-        <div class="notice-box">
-            <strong>⚠️ Maintenance Program Policy:</strong> This subscription maintains clean vehicles. Vehicles with excessive pet hair, heavy mud, or deep neglected stains require an initial deep-clean surcharge on visit #1 to reset the vehicle to baseline.
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 px-4 text-center border-b border-slate-800">
+        <div class="max-w-4xl mx-auto">
+            <span class="bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full border border-cyan-500/20">Rapid Mobile Interior Maintenance</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-4 mb-6 leading-tight">
+                Showroom Clean. <br/><span class="text-cyan-400">15-Minute Mobile Reset.</span>
+            </h1>
+            <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                High-speed pneumatic interior restoration at your home or workplace. No waiting around.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#pricing" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl text-lg transition shadow-lg shadow-cyan-500/20">
+                    Book Your Reset
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section-header">How It Works</div>
-    
-    <div class="step-item">
-        <div class="step-num">1</div>
-        <div>
-            <strong>Subscribe Online</strong>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Lock in your $29/mo rate. Cancel anytime with a single click.</p>
+    <!-- Visual Showcase / Process -->
+    <section class="py-16 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Pneumatic Speed & Precision</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50">
+                    <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=600" alt="Interior Purge" class="h-48 w-full object-cover"/>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-white mb-2">1. High-Pressure Air Purge</h3>
+                        <p class="text-slate-400 text-sm">Pulse air technology blasts deep-seated dust and crumbs out of tight crevices standard vacuums miss.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50">
+                    <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=600" alt="Vacuuming" class="h-48 w-full object-cover"/>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-white mb-2">2. High-CFM Deep Extraction</h3>
+                        <p class="text-slate-400 text-sm">Industrial suction pulls all debris from carpets, mats, and seating surfaces instantly.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50">
+                    <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fe?auto=format&fit=crop&q=80&w=600" alt="Interior Detail" class="h-48 w-full object-cover"/>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-white mb-2">3. Surface Sanitization & Glass</h3>
+                        <p class="text-slate-400 text-sm">Pro-grade chemical wipe-down on touchpoints, dash, and streak-free glass finishing.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="step-item">
-        <div class="step-num">2</div>
-        <div>
-            <strong>We Show Up & Reset</strong>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">We pull up to your office or home driveway every two weeks and perform a fast 15-minute reset.</p>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">Simple, Transparent Pricing</h2>
+            <p class="text-slate-400 text-center mb-12">Cancel or pause membership anytime with one click.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Single Service -->
+                <div class="card-bg p-8 rounded-2xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <span class="text-slate-400 text-sm font-semibold uppercase">One-Time Reset</span>
+                        <div class="text-4xl font-extrabold text-white my-4">$49 <span class="text-slate-400 text-base font-normal">/ visit</span></div>
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Full Interior Pneumatic Air Purge</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Complete Vacuum & Floor Mat Refresh</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Dash, Console & Touchpoint Sanitization</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Streak-Free Interior Glass Wipe</li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 rounded-xl transition">Select One-Time Reset</button>
+                </div>
+
+                <!-- Membership Plan -->
+                <div class="card-bg p-8 rounded-2xl border-2 border-cyan-400 relative flex flex-col justify-between">
+                    <span class="absolute -top-3 right-6 bg-cyan-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase">Best Value</span>
+                    <div>
+                        <span class="text-cyan-400 text-sm font-semibold uppercase">Stealth Pass Membership</span>
+                        <div class="text-4xl font-extrabold text-white my-4">$29 <span class="text-slate-400 text-base font-normal">/ month</span></div>
+                        <p class="text-xs text-cyan-300/80 mb-4">Includes 2 maintenance resets per month ($14.50/visit)</p>
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Everything in One-Time Reset (2x Monthly)</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Priority Scheduling & Mobile On-Site Service</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Lock-in Low Monthly Rate</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i> No Contracts — Cancel Anytime</li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-3 rounded-xl transition">Start Subscription</button>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="step-item">
-        <div class="step-num">3</div>
-        <div>
-            <strong>Enjoy a Clean Ride 24/7</strong>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">No waiting in line at detail shops or spending your weekends cleaning out cup holders.</p>
+    <!-- Footer & Legal Fine Print -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-12 px-4 text-slate-400 text-sm">
+        <div class="max-w-6xl mx-auto text-center space-y-4">
+            <p class="font-semibold text-slate-200">Stealth Mobile Detailing LLC</p>
+            <p class="text-xs max-w-2xl mx-auto text-slate-500">
+                Text for quick booking: <span class="text-slate-300">(XXX) XXX-XXXX</span> (Google Voice Ready)
+            </p>
+            
+            <!-- Mandatory Legal Fine Print -->
+            <div class="border-t border-slate-900 pt-6 text-xs text-slate-500 max-w-3xl mx-auto space-y-2 text-justify">
+                <p><strong>Service Limitations & Terms:</strong> Stealth Mobile Detailing provides rapid interior maintenance resets. Extremely biohazardous conditions (pet waste, heavy mold, severe biological spills) or bio-cleaning requiring major disassembly are not covered under 15-minute maintenance pricing and are subject to custom quotes.</p>
+                <p><strong>Pre-Existing Damage:</strong> Technician conducts an initial vehicle inspection prior to service. Stealth Mobile Detailing is not responsible for pre-existing torn leather, cracked vinyl, loose trim, or failing electrical components.</p>
+                <p><strong>Subscriptions & Cancellations:</strong> The Stealth Pass ($29/mo) automatically renews monthly. Subscriptions may be canceled at any time prior to the next billing cycle without penalty by texting or contacting support.</p>
+            </div>
+
+            <div class="text-xs text-slate-600 pt-4">
+                &copy; 2026 Stealth Mobile Detailing. All Rights Reserved.
+            </div>
         </div>
-    </div>
-
-    <footer>
-        <p>Servicing Lake City, FL (32024, 32025, 32055)</p>
-        <!-- LINK 3: Replace phone number with your business number -->
-        <p style="margin-top: 10px;">Questions? Text us at <a href="sms:13860000000">(386) XXX-XXXX</a></p>
-        <p style="margin-top: 5px;">© 2026 Stealth Detail. All rights reserved.</p>
     </footer>
 
 </body>
