@@ -1,107 +1,611 @@
-<!-- PRICING SECTION -->
-<section id="pricing" class="py-20 bg-slate-950 text-white relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-bold mb-2">Market Disruption Pricing</h2>
-      <p class="text-4xl font-extrabold tracking-tight sm:text-5xl">Clean Car. Zero Effort. Unbeatable Price.</p>
-      <p class="mt-4 text-slate-400 text-lg">We don't charge $200+ like traditional detailers. Get a full deep reset upfront, then automated 2x/month maintenance for less than a coffee a day.</p>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stealth Detail | Automated Mobile Auto Detailing in Lake City, FL</title>
+    <meta name="description" content="High-speed, recurring mobile interior detailing in Lake City, FL. Keep your car spotless for just $29/mo.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
-      
-      <!-- MEMBERSHIP CARD (PRIMARY FOCUS) -->
-      <div class="relative bg-slate-900 border-2 border-cyan-500 rounded-2xl p-8 flex flex-col justify-between shadow-2xl shadow-cyan-500/10">
-        <div class="absolute -top-4 right-6 bg-cyan-500 text-slate-950 text-xs font-black uppercase tracking-wider py-1 px-4 rounded-full shadow-lg">
-          Most Popular / Best Value
+    <style>
+        /* ==========================================================================
+           RESET & GLOBALS
+           ========================================================================== */
+        :root {
+            --bg-main: #0a0f1d;
+            --bg-card: #151c2e;
+            --bg-card-hover: #1e273e;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.25);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border: #232d42;
+            --success: #10b981;
+            --radius: 12px;
+            --max-width: 1100px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ==========================================================================
+           NAVIGATION
+           ========================================================================== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 15, 29, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-btn {
+            background: var(--accent);
+            color: #000 !important;
+            font-weight: 700 !important;
+            padding: 8px 18px;
+            border-radius: 6px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        /* ==========================================================================
+           HERO SECTION
+           ========================================================================== */
+        .hero {
+            padding: 140px 24px 80px 24px;
+            text-align: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .hero-pill {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto 36px auto;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+            font-weight: 700;
+            padding: 16px 36px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 24px var(--accent-glow);
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px var(--accent-glow);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            font-weight: 600;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-card-hover);
+        }
+
+        /* ==========================================================================
+           HOW IT WORKS SECTION
+           ========================================================================== */
+        .section {
+            padding: 90px 24px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: 0.8;
+            margin-bottom: 12px;
+        }
+
+        .step-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           PRICING SECTION
+           ========================================================================== */
+        .pricing-wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 480px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            right: 28px;
+            background: var(--accent);
+            color: #000;
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+        }
+
+        .pricing-header p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .price-tag {
+            margin: 24px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .price-tag .amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .price-tag .period {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 28px 0;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+        }
+
+        .pricing-features li svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .pricing-features li strong {
+            color: var(--text-primary);
+        }
+
+        .card-note {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px dashed var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        /* ==========================================================================
+           RESET FEE INFO BANNER
+           ========================================================================== */
+        .info-box {
+            background: var(--bg-card);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .info-box-icon {
+            font-size: 1.8rem;
+        }
+
+        .info-box-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+
+        .info-box-content p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+        }
+
+        /* ==========================================================================
+           FAQ SECTION
+           ========================================================================== */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           FOOTER
+           ========================================================================== */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 24px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* ==========================================================================
+           RESPONSIVE STYLES
+           ========================================================================== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                display: none; /* Mobile menu can be toggled */
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                STEALTH<span>DETAIL</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="https://buy.stripe.com/test_cNifZg5bweJh2ut1B89bO00" class="nav-btn">Get Started</a></li>
+            </ul>
         </div>
-        <div>
-          <h3 class="text-2xl font-bold text-white">The Stealth Pass</h3>
-          <p class="text-slate-400 text-sm mt-1">Full initial restoration + bi-weekly recurring maintenance.</p>
-          
-          <div class="my-6 border-b border-slate-800 pb-6">
-            <div class="flex items-baseline">
-              <span class="text-5xl font-extrabold text-white">$29</span>
-              <span class="text-slate-400 font-medium ml-2">/ month</span>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-pill">Lake City, FL • Mobile Service</div>
+        <h1>Always Clean Interior.<br><span>Zero Hassle. $29/Month.</span></h1>
+        <p>Automated bi-weekly interior maintenance detailing delivered right to your driveway. High-speed, professional, and reliable.</p>
+        
+        <div class="hero-cta-group">
+            <a href="https://buy.stripe.com/test_cNifZg5bweJh2ut1B89bO00" class="btn-primary">
+                Join The Stealth Pass ($29/mo)
+            </a>
+            <a href="#how-it-works" class="btn-secondary">
+                See How It Works
+            </a>
+        </div>
+    </header>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="section">
+        <div class="section-header">
+            <h2>How Stealth Detail Works</h2>
+            <p>Designed for maximum efficiency and speed without disrupting your day.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <h3>Subscribe Online</h3>
+                <p>Lock in your $29/mo Stealth Pass membership in less than 60 seconds with no long-term contracts.</p>
             </div>
-            <p class="text-cyan-400 font-semibold text-sm mt-2">+ $69 One-Time Initial Gateway Deep Reset</p>
-          </div>
 
-          <ul class="space-y-4 text-sm text-slate-300 mb-8">
-            <li class="flex items-start">
-              <span class="text-cyan-400 font-bold mr-2">✓</span>
-              <span><strong>Initial Gateway Reset ($200+ Value):</strong> Vapor steam sanitization, high-pressure air purge, carpet sweep, glass & deep interior sanitization.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 font-bold mr-2">✓</span>
-              <span><strong>2 Maintenance Resets / Month:</strong> 20-minute high-speed interior reset + exterior pressure foam & rinse.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 font-bold mr-2">✓</span>
-              <span><strong>Rain & Mud Safety Net:</strong> Free 5-minute spot touch-up within 48 hours of any reset.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-cyan-400 font-bold mr-2">✓</span>
-              <span><strong>Touchless Driveway Service:</strong> Keyless access option—we clean it before you wake up.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <!-- REPLACE WITH YOUR STRIPE PAYMENT LINK -->
-          <a href="YOUR_STRIPE_STEALTH_PASS_LINK_HERE" class="block w-full text-center bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-4 px-6 rounded-xl transition duration-200 uppercase tracking-wider text-sm shadow-lg shadow-cyan-500/20">
-            Join The Stealth Pass ($69 + $29/mo)
-          </a>
-          <p class="text-xs text-slate-500 text-center mt-3">Requires 3-month commitment to lock in $69 reset price.</p>
-        </div>
-      </div>
-
-      <!-- ONE-TIME CLEAN CARD (PRICE ANCHOR) -->
-      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between">
-        <div>
-          <h3 class="text-2xl font-bold text-white">One-Time Deep Clean</h3>
-          <p class="text-slate-400 text-sm mt-1">A single standalone deep restoration without membership.</p>
-          
-          <div class="my-6 border-b border-slate-800 pb-6">
-            <div class="flex items-baseline">
-              <span class="text-5xl font-extrabold text-white">$199</span>
-              <span class="text-slate-400 font-medium ml-2">/ single visit</span>
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <h3>Text Your Photos</h3>
+                <p>Text 2 quick photos of your front interior to <strong>(386) 243-5478</strong> so we can evaluate baseline condition and assign your route slot.</p>
             </div>
-            <p class="text-slate-500 font-medium text-sm mt-2">No recurring membership required</p>
-          </div>
 
-          <ul class="space-y-4 text-sm text-slate-300 mb-8">
-            <li class="flex items-start">
-              <span class="text-slate-500 mr-2">•</span>
-              <span>Single deep steam interior sanitization</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-slate-500 mr-2">•</span>
-              <span>Crevice air purge & high-power vacuum sweep</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-slate-500 mr-2">•</span>
-              <span>Exterior foam spray & spot-free rinse</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-slate-500 text-xs mr-2">✗</span>
-              <span class="text-slate-500">No bi-weekly maintenance resets included</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-slate-500 text-xs mr-2">✗</span>
-              <span class="text-slate-500">No Rain & Mud Safety Net guarantee</span>
-            </li>
-          </ul>
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <h3>Blitz Service</h3>
+                <p>Our detailers perform rapid 15–20 minute maintenance service right in your driveway on your scheduled route days.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="section">
+        <div class="section-header">
+            <h2>Simple, Frictionless Pricing</h2>
+            <p>One membership plan to keep your cabin spotless year-round.</p>
         </div>
 
-        <div>
-          <!-- REPLACE WITH YOUR STRIPE ONE-TIME LINK -->
-          <a href="YOUR_STRIPE_SINGLE_CLEAN_LINK_HERE" class="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-4 px-6 rounded-xl transition duration-200 uppercase tracking-wider text-sm border border-slate-700">
-            Book Single Clean ($199)
-          </a>
-          <p class="text-xs text-slate-500 text-center mt-3">Standard booking subject to calendar availability.</p>
-        </div>
-      </div>
+        <div class="pricing-wrap">
+            <div class="pricing-card">
+                <div class="pricing-badge">Lake City Pass</div>
+                <div class="pricing-header">
+                    <h3>Stealth Pass Membership</h3>
+                    <p>Recurring interior maintenance detailing</p>
+                </div>
 
-    </div>
-  </div>
-</section>
+                <div class="price-tag">
+                    <span class="amount">$29</span>
+                    <span class="period">/ month</span>
+                </div>
+
+                <ul class="pricing-features">
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        <strong>2x Monthly</strong> Interior Maintenance Route
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        High-powered cabin vacuuming & floor mat cleaning
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Dash, console, & door jamb wipe-down
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Interior glass streak-free cleaning
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Cancel or pause anytime online
+                    </li>
+                </ul>
+
+                <a href="https://buy.stripe.com/test_cNifZg5bweJh2ut1B89bO00" class="btn-primary" style="display: block; text-align: center;">
+                    Subscribe Now
+                </a>
+
+                <div class="card-note">
+                    📱 After subscribing, you will be directed to text 2 interior photos to <strong>(386) 243-5478</strong> for route assignment.
+                </div>
+            </div>
+        </div>
+
+        <!-- GATEWAY RESET EXPLANATION -->
+        <div class="info-box">
+            <div class="info-box-icon">💡</div>
+            <div class="info-box-content">
+                <h4>Vehicle Baseline Policy (Gateway Deep Reset)</h4>
+                <p>To keep maintenance routes fast and affordable for everyone, vehicles requiring heavy stain removal, pet hair extraction, or extreme build-up will require a one-time <strong>$69 Gateway Reset Fee</strong> prior to starting routine maintenance. Photos texted after signup will confirm if your vehicle is ready for immediate $29 maintenance!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="section">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about Stealth Detail services.</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>Do I need to be home when you detail?</h3>
+                <p>Nope! As long as your doors are unlocked during your assigned route time slot, our technician will perform the interior maintenance blitz and lock up when finished.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What areas do you service?</h3>
+                <p>We currently operate dedicated service routes across Lake City, FL and immediately surrounding residential neighborhoods.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why do I need to text photos after subscribing?</h3>
+                <p>Photo verification allows us to inspect your vehicle's current condition and make sure it's ready for high-speed maintenance routes without delays.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I cancel anytime?</h3>
+                <p>Yes, absolutely. There are no contracts or cancellation penalties. You can manage or cancel your subscription at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Stealth Detail. All rights reserved.</p>
+        <p>Lake City, FL • Text Support: (386) 243-5478</p>
+    </footer>
+
+</body>
+</html>
